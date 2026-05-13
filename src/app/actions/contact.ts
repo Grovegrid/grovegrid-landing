@@ -1,4 +1,4 @@
-﻿"use server";
+"use server";
 
 import { Resend } from "resend";
 
@@ -17,7 +17,7 @@ export async function sendEmail(formData: FormData) {
   try {
     const recipients = process.env.CONTACT_RECIPIENT_EMAIL 
       ? process.env.CONTACT_RECIPIENT_EMAIL.split(",").map(email => email.trim())
-      : ["delivered@resend.dev"];
+      : ["grovegridsite@gmail.com"];
 
     const { data, error } = await resend.emails.send({
       from: "grovegrid <onboarding@resend.dev>",
