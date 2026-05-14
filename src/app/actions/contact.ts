@@ -2,7 +2,14 @@
 
 import https from "https";
 
-export async function sendEmail(formData: FormData) {
+export interface EmailResponse {
+  success?: boolean;
+  error?: string;
+  data?: any;
+  details?: any;
+}
+
+export async function sendEmail(formData: FormData): Promise<EmailResponse> {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
   const service = formData.get("service") as string || "General Inquiry";
@@ -42,7 +49,7 @@ export async function sendEmail(formData: FormData) {
     `,
   });
 
-  return new Promise((resolve) => {
+  return new Promise<EmailResponse>((resolve) => {
     const options = {
       hostname: "api.resend.com",
       port: 443,
@@ -54,7 +61,7 @@ export async function sendEmail(formData: FormData) {
         "Content-Length": Buffer.byteLength(postData),
         "User-Agent": "Node-HTTPS-Client"
       },
-      timeout: 15000 // 15 second timeout
+      timeout: 15000
     };
 
     console.log("[Contact Action] Sending request to Resend API...");
@@ -104,6 +111,7 @@ export async function sendEmail(formData: FormData) {
     req.end();
   });
 }
+
 
 
 
