@@ -34,8 +34,8 @@ const KNOWLEDGE = {
     actions: [{ label: "â†’ See Our Process", value: "navigate:how" }],
   },
   team: {
-    keywords: ["team", "founder", "who runs", "leadership", "ridoy", "priom", "ceo", "coo", "co-founder", "members"],
-    response: `**The minds behind grovegrid:**\n\nðŸ‘¤ **Ridoy Baidya** â€” *Founder & CEO*\nFull-Stack Web Developer from Sylhet. 3rd Year CSE @ SUST. Specializes in building robust and scalable web applications.\n\nðŸ‘¤ **Priom Chakraborty** â€” *Co-Founder & COO*\nPassionate developer and strategic thinker. Drives operational excellence and product strategy at grovegrid.`,
+    keywords: ["team", "founder", "who runs", "leadership", "ridoy", "priom", "ceo", "coo", "members"],
+    response: `**The minds behind grovegrid:**\n\nðŸ‘¤ **Ridoy Baidya** â€” *Founder & CEO*\nFull-Stack Web Developer from Sylhet. 3rd Year CSE @ SUST. Specializes in building robust and scalable web applications.\n\nðŸ‘¤ **Priom Chakraborty** â€” *Founder & COO*\nPassionate developer and strategic thinker. Drives operational excellence and product strategy at grovegrid.`,
     actions: [{ label: "â†’ Meet the Team", value: "navigate:team" }],
   },
   contact: {
