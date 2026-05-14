@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: "Priom Chakraborty",
     role: "Co-Founder & COO of grovegrid",
-    cornerLabel: "CO-FOUNDER",
+    cornerLabel: "FOUNDER",
     image: "/profile_priom.jpeg",
     bio: "I am a passionate developer and strategic thinker from Sylhet, Bangladesh. I drive operational excellence and product strategy at grovegrid, ensuring every project we deliver exceeds expectations with precision and innovation.",
     badge: "3RD YEAR CSE @ SUST",

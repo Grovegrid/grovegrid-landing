@@ -13,7 +13,6 @@ export const Contact = () => {
     setStatus("sending");
 
     const formData = new FormData(e.currentTarget);
-
     try {
       const result = await sendEmail(formData);
 
@@ -22,14 +21,18 @@ export const Contact = () => {
         (e.target as HTMLFormElement).reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
-        console.error(result.error);
+        console.error("Submission failed:", result.error, result.details);
         setStatus("idle");
-        alert(result.error || "Something went wrong. Please try again.");
+        if (result.error?.toLowerCase().includes("timeout") || result.error?.toLowerCase().includes("connection")) {
+          alert("The email service is taking too long to respond. Please check your internet connection or try again in a few minutes.");
+        } else {
+          alert(result.error || "Something went wrong. Please try again.");
+        }
       }
     } catch (error) {
-      console.error(error);
+      console.error("Unexpected error:", error);
       setStatus("idle");
-      alert("Failed to send message. Please check your connection.");
+      alert("A system error occurred. Please try again later.");
     }
   };
 
