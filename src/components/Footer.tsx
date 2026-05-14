@@ -7,7 +7,7 @@ export const Footer = () => {
         
         <div className="flex flex-col items-center md:items-start">
           <a href="#" className="flex items-center gap-3 mb-4">
-            <img src="/new_logo.jpeg" alt="Grovegrid Logo" className="w-8 h-8 rounded-sm object-cover" />
+            <img src="/favicon/favicon-96x96.png" alt="Grovegrid Logo" className="w-8 h-8 rounded-sm object-cover" />
             <span className="font-syne font-extrabold tracking-widest text-xl uppercase">Grovegrid</span>
           </a>
           <p className="text-textMuted font-mono text-xs max-w-xs text-center md:text-left">

@@ -55,7 +55,7 @@ export const Navbar = () => {
       <nav className="fixed top-0 w-full z-50 bg-bg/80 backdrop-blur-md border-b border-borderCol transition-all duration-300 py-3 sm:py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <a href="#" className="flex items-center gap-2 sm:gap-3 group z-10">
-            <img src="/new_logo.jpeg" alt="Grovegrid Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-sm object-cover" />
+            <img src="/favicon/favicon-96x96.png" alt="Grovegrid Logo" className="w-6 h-6 sm:w-8 sm:h-8 rounded-sm object-cover" />
             <span className="font-syne font-extrabold tracking-widest text-base sm:text-lg uppercase">Grovegrid</span>
           </a>
           <div className="hidden md:flex gap-6 lg:gap-8 items-center font-mono text-xs lg:text-sm tracking-widest uppercase text-textMuted z-10">
@@ -124,7 +124,7 @@ export const Navbar = () => {
         <div className="flex flex-col h-full p-8">
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-2">
-              <img src="/new_logo.jpeg" alt="Grovegrid Logo" className="w-5 h-5 sm:w-6 sm:h-6 rounded-sm object-cover" />
+              <img src="/favicon/favicon-96x96.png" alt="Grovegrid Logo" className="w-5 h-5 sm:w-6 sm:h-6 rounded-sm object-cover" />
               <span className="font-syne font-bold tracking-widest text-sm uppercase">Grovegrid</span>
             </div>
             <button 
