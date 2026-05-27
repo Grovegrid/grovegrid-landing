@@ -69,7 +69,7 @@ export const Services = () => {
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <span className="font-mono text-xs text-cyan-default uppercase tracking-widest border border-cyan-default/30 bg-cyan-default/10 px-4 py-1.5 rounded-full mb-6 inline-block shadow-[0_0_10px_rgba(0,242,254,0.15)]">
+        <span className="font-mono text-xs text-cyan-default uppercase tracking-widest border border-cyan-default/30 bg-cyan-default/10 px-4 py-1.5 rounded-full mb-6 inline-block shadow-[0_0_10px_rgba(16,185,129,0.15)]">
           Capabilities
         </span>
         <h2 className="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tightest text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-accent drop-shadow-md">
@@ -77,7 +77,7 @@ export const Services = () => {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[300px] gap-4 sm:gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}

@@ -48,7 +48,7 @@ export const Team = () => {
         viewport={{ once: true }}
         className="mb-10 sm:mb-16 text-center"
       >
-        <span className="font-mono text-xs text-purple-accent uppercase tracking-widest border border-purple-accent/30 bg-purple-accent/10 px-4 py-1.5 rounded-full mb-6 inline-block shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+        <span className="font-mono text-xs text-purple-accent uppercase tracking-widest border border-purple-accent/30 bg-purple-accent/10 px-4 py-1.5 rounded-full mb-6 inline-block shadow-[0_0_10px_rgba(16,185,129,0.2)]">
           Leadership
         </span>
         <h2 className="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tightest text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-default drop-shadow-md">
@@ -69,7 +69,7 @@ export const Team = () => {
             {/* Decorative Background Element */}
             <div className="absolute -inset-4 bg-gradient-to-br from-cyan-default/10 to-purple-accent/10 rounded-3xl -z-10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 relative overflow-hidden h-full flex flex-col transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_15px_40px_-15px_rgba(0,242,254,0.3)] group-hover:border-cyan-default/30">
+            <div className="glass-panel rounded-2xl p-6 sm:p-8 relative overflow-hidden h-full flex flex-col transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_15px_40px_-15px_rgba(16,185,129,0.3)] group-hover:border-cyan-default/30">
               
               {/* Corner Accents */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-purple-accent/20 to-transparent flex items-start justify-end p-2 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
