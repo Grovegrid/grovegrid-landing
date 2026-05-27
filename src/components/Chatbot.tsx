@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { MessageCircle, X, Send, ChevronDown, Sparkles } from "lucide-react";
@@ -21,37 +21,36 @@ interface QuickAction {
 const KNOWLEDGE = {
   about: {
     keywords: ["about", "who", "what is grovegrid", "company", "grovegrid", "tell me about", "what do you do", "introduce"],
-    response: `**grovegrid** is a premium tech studio founded in **May 2026** by two 3rd-year CSE students from SUST, Sylhet, Bangladesh.\n\nWe architect **brutalist digital experiences** and **automated backend systems** for the next generation of Bangladeshi industries â€” from schools to e-commerce.\n\nOur motto: **"We Build the Web. We Automate the Rest."**`,
+    response: `**grovegrid** is a premium tech studio founded by developers from SUST, Sylhet, Bangladesh.\n\nWe architect **brutalist digital experiences** and **automated backend systems** for the next generation of industries. We transform raw potential into technical dominance.\n\nOur motto: **"Where growth meets structure."**`,
   },
   services: {
     keywords: ["service", "services", "what do you build", "offer", "capabilities", "build", "develop"],
-    response: `We specialize in **6 core service areas**:\n\n“ **School Systems** ” LMS, attendance, result portals\n“ **Newspaper Portals** ” SEO-optimized news platforms\n“ **Pharma Management** ” Inventory & POS for pharmacies\n“ **Coaching Portals** ” Online exams, payments, CRM\n“ **E-commerce Stores** ” Professional stores with payment gateways\n“ **Corporate Identity** ” Premium brand websites\n\nWant to see more? I can take you to the **Services** section.`,
+    response: `We specialize in **6 core service areas**:\n\n“ **School Systems** ” Digitalization of results, attendance & student tracking.\n“ **Newspaper Portals** ” Ultra-fast digital news platforms optimized for mobile.\n“ **Pharma Management** ” Intelligent inventory & POS for local pharmacies.\n“ **Coaching Portals** ” Online exams, payments, CRM.\n“ **E-commerce Stores** ” Professional stores with payment gateway integrations.\n“ **Corporate Identity** ” Custom high-end websites for premium brand presence.\n\nWant to see more? I can take you to the **Services** section.`,
     actions: [{ label: "â†’ View Services", value: "navigate:services" }],
   },
   process: {
     keywords: ["process", "how do you work", "methodology", "workflow", "how it works", "steps", "approach"],
-    response: `Our **4-step methodology** ensures flawless delivery:\n\n“ **01 ** ” Discovery ” We strip your idea down to the studs, identify bottlenecks, and set brutal goals.\n\n“ **02 ** ” Scope & Plan ” Architectural blueprinting â€” data structures, tech stack, API endpoints.\n\n“ **03 ** ” Build & Review ” Aggressive iteration cycles with continuous collaboration.\n\n“ **04 ** ” Launch & Scale ” Production deployment with automated scaling.`,
+    response: `Our **4-step methodology** ensures flawless delivery:\n\n“ **01 ** ” Discovery ” We analyze your requirements and identify bottlenecks.\n\n“ **02 ** ” Scope & Plan ” Architectural blueprinting â€” data structures and tech stack.\n\n“ **03 ** ” Build & Review ” Aggressive iteration cycles with continuous collaboration.\n\n“ **04 ** ” Launch & Scale ” Production deployment with automated scaling.`,
     actions: [{ label: "â†’ See Our Process", value: "navigate:how" }],
   },
   team: {
-    keywords: ["team", "founder", "who runs", "leadership", "ridoy", "priom", "ceo", "coo", "members"],
-    response: `**The minds behind grovegrid:**\n\nðŸ‘¤ **Ridoy Baidya** â€” *Founder & CEO*\nFull-Stack Web Developer from Sylhet. 3rd Year CSE @ SUST. Specializes in building robust and scalable web applications.\n\nðŸ‘¤ **Priom Chakraborty** â€” *Founder & COO*\nPassionate developer and strategic thinker. Drives operational excellence and product strategy at grovegrid.`,
+    keywords: ["team", "founder", "who runs", "leadership", "ridoy", "priom", "ceo", "coo", "members", "who are you"],
+    response: `**The minds behind grovegrid:**\n\nðŸ‘¤ **Ridoy Baidya** â€” *Founder & CEO*\nFull-Stack Web Developer specializing in building robust and scalable web applications using modern technologies.\n\nðŸ‘¤ **Priom Chakraborty** â€” *Founder & COO*\nPassionate developer and strategic thinker. Drives operational excellence and product strategy ensuring every project exceeds expectations.`,
     actions: [{ label: "â†’ Meet the Team", value: "navigate:team" }],
   },
   contact: {
     keywords: ["contact", "reach", "email", "hire", "start a project", "get started", "work with", "connect", "message"],
-    response: `Ready to launch your project? Here's how to reach us:\n\nðŸ“© **Fill out the contact form** on our site â€” we reply within **24 hours**.\n\nYou can select your primary need:\nâ€¢ Web Development\nâ€¢ Workflow Automation\nâ€¢ API Integration\nâ€¢ Cloud / DevOps\nâ€¢ Data Analytics\nâ€¢ AI Integration\n\nLet me take you there!`,
+    response: `Ready to launch your project? Here's how to reach us:\n\nðŸ“© **Fill out the contact form** on our site â€” we reply within **24 hours**.\n\nYou can select your primary need:\nâ€¢ Web Development\nâ€¢ Workflow Automation\nâ€¢ API Integration\nâ€¢ Cloud / DevOps\n\nLet me take you there!`,
     actions: [{ label: "â†’ Start a Project", value: "navigate:contact" }],
+  },
+  location: {
+    keywords: ["location", "where", "office", "address", "city", "country", "based"],
+    response: `We are based in **Sylhet, Bangladesh** ðŸ‡§ðŸ‡©, proudly founded by developers from Shahjalal University of Science and Technology (SUST). \n\nHowever, we work with clients globally to architect premium digital experiences!`,
   },
   results: {
     keywords: ["results", "stats", "numbers", "projects", "how many", "track record", "speed", "portfolio"],
     response: `Here's our track record so far:\n\nðŸš€ **50+** Projects Shipped\nâš¡ **<48h** Prototype Time\nðŸ”¥ **10x** Execution Speed\nðŸ’¯ **100%** TypeScript\n\nWe move fast and ship quality.`,
     actions: [{ label: "â†’ See Results", value: "navigate:stats" }],
-  },
-  testimonials: {
-    keywords: ["testimonial", "review", "client", "feedback", "what clients say", "proof", "customers"],
-    response: `Our clients love what we build:\n\nâ­ *"grovegrid automated our entire lead qualification pipeline. We reduced manual overhead by 80%."*\nâ€” **Marcus Reed**, Founder, NovaFlow\n\nâ­ *"The UI is incredibly sharp, and the backend is rock solid."*\nâ€” **Sarah Lin**, CTO, DataSyndicate\n\nâ­ *"They integrated OpenAI into our portal in under two weeks. Pure technical execution."*\nâ€” **James Vance**, VP Engineering, Aethos`,
-    actions: [{ label: "â†’ Read Reviews", value: "navigate:testimonials" }],
   },
   pricing: {
     keywords: ["price", "pricing", "cost", "how much", "budget", "quote", "rate", "charge"],
@@ -60,7 +59,7 @@ const KNOWLEDGE = {
   },
   tech: {
     keywords: ["tech", "technology", "stack", "tools", "framework", "next.js", "react", "typescript", "tailwind"],
-    response: `Our **tech stack** is built for speed and scale:\n\n**Frontend:** Next.js, React, Tailwind CSS, Framer Motion\n**Backend:** Node.js, REST APIs, GraphQL\n**DevOps:** Docker, AWS / GCP, CI/CD\n**Automation:** Zapier, Make.com\n**Language:** 100% TypeScript\n\nWe use the same modern tools that power top-tier startups worldwide.`,
+    response: `Our **tech stack** is built for speed and scale:\n\n**Frontend:** Next.js, React, Tailwind CSS, Framer Motion\n**Backend:** Node.js, REST APIs, GraphQL\n**DevOps:** Docker, AWS / GCP, CI/CD\n**Language:** 100% TypeScript\n\nWe use the same modern tools that power top-tier startups worldwide.`,
   },
   navigation: {
     keywords: ["navigate", "go to", "take me", "show me", "where is", "find", "section"],
@@ -79,18 +78,19 @@ const KNOWLEDGE = {
 const GREETING: Message = {
   id: "greeting",
   role: "bot",
-  text: `Hey there! ‘‹ I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n Learn about our **services & process**\n Meet the **team**\n Navigate to any **section**\n Get a **project quote**\n\nWhat would you like to know?`,
+  text: `Hey there! ‘‹ I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n Learn about our **services & process**\n Meet the **team & location**\n Navigate to any **section**\n Get a **project quote**\n\nWhat would you like to know?`,
   actions: [
     { label: "About Us", value: "about" },
     { label: "Services", value: "services" },
     { label: "Meet the Team", value: "team" },
+    { label: "Location", value: "location" },
     { label: "Start a Project", value: "contact" },
   ],
 };
 
 const FALLBACK_RESPONSES = [
-  `Hmm, I'm not sure about that one. But I can tell you about our **services**, **team**, **process**, or help you **start a project**! What interests you?`,
-  `I don't have info on that specifically, but I'm an expert on all things grovegrid! Try asking about our **capabilities**, **pricing**, or **tech stack**.`,
+  `Hmm, I'm not sure about that one. But I can tell you about our **services**, **team**, **location**, or help you **start a project**! What interests you?`,
+  `I don't have info on that specifically, but I'm an expert on all things grovegrid! Try asking about our **capabilities**, **location**, or **tech stack**.`,
   `That's a great question! Unfortunately it's outside my knowledge. I can help with anything about **grovegrid** our services, team, process, or getting in touch.`,
 ];
 
@@ -231,7 +231,7 @@ export const Chatbot = () => {
           }
           setIsOpen(!isOpen);
         }}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[200] w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-default text-bg flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.5)] transition-shadow"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[200] w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-cyan-dim to-purple-accent text-white flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.4)] hover:shadow-[0_0_40px_rgba(5,150,105,0.6)] transition-shadow"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle chatbot"
@@ -266,7 +266,7 @@ export const Chatbot = () => {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold"
+            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow-lg"
           >
             1
           </motion.div>
@@ -281,19 +281,19 @@ export const Chatbot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed bottom-[4.5rem] right-3 sm:bottom-24 sm:right-6 z-[199] w-[300px] sm:w-[380px] max-w-[calc(100vw-1.5rem)] h-[60vh] sm:h-[520px] max-h-[calc(100vh-6rem)] flex flex-col bg-bg border border-borderCol rounded-lg shadow-[0_0_60px_rgba(34,211,238,0.08)] overflow-hidden"
+            className="fixed bottom-[4.5rem] right-3 sm:bottom-24 sm:right-6 z-[199] w-[300px] sm:w-[380px] max-w-[calc(100vw-1.5rem)] h-[60vh] sm:h-[520px] max-h-[calc(100vh-6rem)] flex flex-col bg-[#050505]/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_0_60px_rgba(16,185,129,0.15)] overflow-hidden"
             id="chatbot-panel"
           >
             {/* Header */}
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-borderCol bg-panel/80 backdrop-blur-sm shrink-0">
+            <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-white/5 backdrop-blur-md shrink-0">
               <div className="relative">
-                <div className="w-9 h-9 rounded-full bg-cyan-default/15 border border-cyan-default/30 flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-cyan-default" />
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-default/20 to-purple-accent/20 border border-white/20 flex items-center justify-center shadow-inner">
+                  <Sparkles className="w-5 h-5 text-cyan-default" />
                 </div>
-                <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-panel" />
+                <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-[#0B0C10]" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-syne font-bold text-sm text-textMain">GroveBot</h3>
+                <h3 className="font-syne font-bold text-sm text-white">GroveBot</h3>
                 <p className="font-mono text-[10px] text-green-400 uppercase tracking-widest">Online</p>
               </div>
               <button
@@ -303,7 +303,7 @@ export const Chatbot = () => {
                   setIsTyping(false);
                   setIsOpen(false);
                 }}
-                className="text-textMuted hover:text-cyan-default transition-colors p-1"
+                className="text-textMuted hover:text-white transition-colors p-1"
                 aria-label="Minimize chat"
               >
                 <ChevronDown className="w-5 h-5" />
@@ -323,9 +323,9 @@ export const Chatbot = () => {
                   <div
                     className={`max-w-[85%] ${
                       msg.role === "user"
-                        ? "bg-cyan-default/15 border border-cyan-default/25 text-textMain"
-                        : "bg-panel border border-borderCol text-textMain"
-                    } rounded-lg px-4 py-3`}
+                        ? "bg-gradient-to-br from-cyan-default/20 to-purple-accent/20 border border-white/10 text-white backdrop-blur-sm"
+                        : "bg-white/5 border border-white/10 text-white backdrop-blur-sm"
+                    } rounded-2xl px-4 py-3 shadow-lg`}
                   >
                     <div
                       className="text-[13px] leading-relaxed font-inter"
@@ -334,12 +334,12 @@ export const Chatbot = () => {
 
                     {/* Quick Actions */}
                     {msg.actions && msg.actions.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-borderCol/50">
+                      <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-white/10">
                         {msg.actions.map((action, i) => (
                           <button
                             key={i}
                             onClick={() => handleActionClick(action.value)}
-                            className="px-3 py-1.5 bg-bg border border-cyan-default/30 text-cyan-default font-mono text-[10px] uppercase tracking-wider hover:bg-cyan-default/10 hover:border-cyan-default transition-all rounded"
+                            className="px-3 py-1.5 bg-white/5 border border-white/20 text-cyan-default font-mono text-[10px] uppercase tracking-wider hover:bg-white/10 hover:border-cyan-default hover:text-white transition-all rounded-lg"
                           >
                             {action.label}
                           </button>
@@ -357,9 +357,9 @@ export const Chatbot = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-panel border border-borderCol rounded-lg px-4 py-3 flex items-center gap-1.5">
+                  <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 flex items-center gap-1.5 backdrop-blur-sm">
                     <div className="w-2 h-2 bg-cyan-default/60 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <div className="w-2 h-2 bg-cyan-default/60 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <div className="w-2 h-2 bg-purple-accent/60 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
                     <div className="w-2 h-2 bg-cyan-default/60 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
                 </motion.div>
@@ -369,7 +369,7 @@ export const Chatbot = () => {
             </div>
 
             {/* Input Area */}
-            <div className="px-4 py-3 border-t border-borderCol bg-panel/50 shrink-0">
+            <div className="px-4 py-3 border-t border-white/10 bg-black/20 backdrop-blur-md shrink-0">
               <div className="flex gap-2">
                 <input
                   ref={inputRef}
@@ -378,20 +378,20 @@ export const Chatbot = () => {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Ask me anything..."
-                  className="flex-1 bg-bg border border-borderCol focus:border-cyan-default text-textMain px-4 py-2.5 outline-none transition-colors font-mono text-xs rounded placeholder:text-textMuted/50"
+                  className="flex-1 bg-white/5 border border-white/10 focus:border-cyan-default/50 text-white px-4 py-2.5 outline-none transition-colors font-mono text-xs rounded-xl placeholder:text-white/30"
                   id="chatbot-input"
                 />
                 <button
                   onClick={() => handleSend()}
                   disabled={!input.trim()}
-                  className="w-10 h-10 bg-cyan-default text-bg flex items-center justify-center rounded hover:bg-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
+                  className="w-10 h-10 bg-gradient-to-r from-cyan-dim to-purple-accent text-white flex items-center justify-center rounded-xl hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
                   aria-label="Send message"
                   id="chatbot-send"
                 >
                   <Send className="w-4 h-4" />
                 </button>
               </div>
-              <p className="font-mono text-[9px] text-textMuted/50 text-center mt-2 uppercase tracking-wider">
+              <p className="font-mono text-[9px] text-white/30 text-center mt-2 uppercase tracking-wider">
                 Powered by grovegrid
               </p>
             </div>

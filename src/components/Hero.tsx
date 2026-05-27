@@ -19,7 +19,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-block border border-white/10 bg-white/5 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 mb-8 font-mono text-[10px] sm:text-xs text-cyan-default uppercase tracking-widest shadow-[0_0_15px_rgba(0,242,254,0.1)]"
+          className="inline-block border border-white/10 bg-white/5 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 mb-8 font-mono text-[10px] sm:text-xs text-cyan-default uppercase tracking-widest shadow-[0_0_15px_rgba(16,185,129,0.1)]"
         >
           v1.0 &mdash; Launch Day, May 10 2026
         </motion.div>
@@ -29,13 +29,13 @@ export const Hero = () => {
         </h1>
 
         <p className="font-inter font-light text-sm sm:text-lg md:text-xl text-textMuted max-w-2xl mb-10 sm:mb-12 leading-relaxed">
-          Grovegrid architects premium digital experiences and automated systems for the next generation of industries. We transform raw potential into technical dominance.
+          Architecting digital dominance. We build the web and automate the rest.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-16 w-full sm:w-auto">
           <a
             href="#contact"
-            className="px-8 py-4 bg-gradient-to-r from-cyan-dim to-purple-accent text-white font-mono font-bold text-xs sm:text-sm uppercase tracking-widest rounded-lg shadow-[0_0_20px_rgba(0,242,254,0.3)] hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="px-8 py-4 bg-gradient-to-r from-cyan-dim to-purple-accent text-white font-mono font-bold text-xs sm:text-sm uppercase tracking-widest rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_35px_rgba(5,150,105,0.5)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             Launch Your Project <span>&rarr;</span>
           </a>
@@ -66,7 +66,7 @@ export const Hero = () => {
             <div className="absolute w-[80%] h-[120%] sm:w-[60%] sm:h-[140%] glass-panel rounded-2xl border border-white/5 bg-gradient-to-br from-purple-accent/10 to-transparent transform -translate-z-12 blur-sm opacity-50"></div>
             
             {/* Main Panel */}
-            <div className="relative w-full h-full glass-panel rounded-2xl border border-cyan-default/30 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-[0_0_50px_rgba(0,242,254,0.15)] flex flex-col p-6 sm:p-8 overflow-hidden z-10">
+            <div className="relative w-full h-full glass-panel rounded-2xl border border-cyan-default/30 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-[0_0_50px_rgba(16,185,129,0.15)] flex flex-col p-6 sm:p-8 overflow-hidden z-10">
               
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-purple-accent/30 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan-default/30 rounded-full blur-3xl"></div>
@@ -112,7 +112,7 @@ export const Hero = () => {
             <motion.div 
               animate={{ y: [-15, 15, -15] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-4 sm:-right-12 -bottom-8 sm:-bottom-12 w-32 h-32 sm:w-48 sm:h-48 glass-panel rounded-xl border border-purple-accent/40 bg-purple-accent/10 backdrop-blur-md transform translate-z-12 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.2)] z-20"
+              className="absolute -right-4 sm:-right-12 -bottom-8 sm:-bottom-12 w-32 h-32 sm:w-48 sm:h-48 glass-panel rounded-xl border border-purple-accent/40 bg-purple-accent/10 backdrop-blur-md transform translate-z-12 flex items-center justify-center shadow-[0_0_30px_rgba(5,150,105,0.2)] z-20"
             >
               <div className="text-center">
                 <div className="text-3xl sm:text-5xl font-syne font-bold text-white mb-1">+400%</div>
