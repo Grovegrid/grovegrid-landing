@@ -29,7 +29,7 @@ export const Hero = () => {
         </h1>
 
         <p className="font-inter font-light text-sm sm:text-lg md:text-xl text-textMuted max-w-2xl mb-10 sm:mb-12 leading-relaxed">
-          Grovegrid architects premium digital experiences and automated systems for the next generation of industries. We transform raw potential into technical dominance.
+          Architecting digital dominance. We build the web and automate the rest.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-16 w-full sm:w-auto">

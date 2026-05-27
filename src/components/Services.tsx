@@ -6,7 +6,7 @@ import { GraduationCap, Newspaper, Pill, BookOpen, ShoppingBag, Layout } from "l
 const services = [
   {
     title: "School Systems",
-    desc: "Complete digitalization of results, attendance, and student tracking. Stand out from other schools with a professional portal.",
+    desc: "Digital results, attendance, and student tracking.",
     icon: <GraduationCap className="w-6 h-6 text-white" />,
     tags: ["LMS", "Automation", "SMS Alerts"],
     span: "md:col-span-2 md:row-span-2",
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Newspaper Portals",
-    desc: "Ultra-fast digital news platforms optimized for mobile.",
+    desc: "Ultra-fast, mobile-optimized digital news.",
     icon: <Newspaper className="w-6 h-6 text-cyan-default" />,
     tags: ["SEO", "AdSense", "Speed"],
     span: "md:col-span-1 md:row-span-1",
@@ -24,7 +24,7 @@ const services = [
   },
   {
     title: "Pharma Management",
-    desc: "Intelligent inventory for local pharmacies. Track expiry dates, manage stock levels, and eliminate financial loss.",
+    desc: "Intelligent inventory and POS for modern pharmacies.",
     icon: <Pill className="w-6 h-6 text-purple-accent" />,
     tags: ["Inventory", "POS", "Analytics"],
     span: "md:col-span-1 md:row-span-2",
@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: "Coaching Portals",
-    desc: "Comprehensive management for coaching centers. Online exams, lecture sheets, and parent notifications.",
+    desc: "Online exams, payments, and complete CRM.",
     icon: <BookOpen className="w-6 h-6 text-cyan-default" />,
     tags: ["Exams", "Payments", "CRM"],
     span: "md:col-span-2 md:row-span-1",
@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: "E-commerce Stores",
-    desc: "Level up from F-commerce to a professional store. Automated checkout, payment gateway integration, and order tracking.",
+    desc: "Automated checkout, payments, and order tracking.",
     icon: <ShoppingBag className="w-6 h-6 text-white" />,
     tags: ["Payment", "Inventory", "UI/UX"],
     span: "md:col-span-2 md:row-span-1",
@@ -51,7 +51,7 @@ const services = [
   },
   {
     title: "Corporate Identity",
-    desc: "Custom high-end websites for local businesses looking to build a premium brand presence.",
+    desc: "Custom high-end websites for premium brands.",
     icon: <Layout className="w-6 h-6 text-cyan-default" />,
     tags: ["Branding", "Landing Page", "Performance"],
     span: "md:col-span-1 md:row-span-1",

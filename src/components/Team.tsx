@@ -11,7 +11,7 @@ const teamMembers = [
     role: "Founder & CEO of grovegrid",
     cornerLabel: "FOUNDER",
     image: "/profile_ridoy.jpg",
-    bio: "I am a Full-Stack Web Developer from Sylhet, Bangladesh. I specialize in building robust and scalable web applications using modern technologies. My focus is on creating seamless user experiences with clean, efficient code.",
+    bio: "Full-Stack Web Developer. Specializing in robust and scalable applications with clean, efficient code.",
     badge: "3RD YEAR CSE @ SUST",
     socials: {
       github: "https://github.com/rid-coder-70",
@@ -28,7 +28,7 @@ const teamMembers = [
     role: "Founder & COO of grovegrid",
     cornerLabel: "FOUNDER",
     image: "/profile_priom.jpeg",
-    bio: "I am a passionate developer and strategic thinker from Sylhet, Bangladesh. I drive operational excellence and product strategy at grovegrid, ensuring every project we deliver exceeds expectations with precision and innovation.",
+    bio: "Strategic thinker. Driving operational excellence and product strategy to exceed expectations.",
     badge: "3RD YEAR CSE @ SUST",
     socials: {
       github: "https://github.com/chkpriom",

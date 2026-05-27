@@ -95,6 +95,7 @@ body {
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 80%);
+  animation: gridMoveFine 10s linear infinite;
 }
 
 /* Glowing orbs background */
@@ -123,11 +124,22 @@ body {
   transform-origin: center bottom;
   mask-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 80%);
   -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 80%);
+  animation: gridMovePerspective 3s linear infinite;
 }
 
 @keyframes gridPulse {
   0% { opacity: 0.6; transform: scale(1); }
   100% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes gridMoveFine {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes gridMovePerspective {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 80px; }
 }
 
 /* Glassmorphism utilities */
