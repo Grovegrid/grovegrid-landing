@@ -109,17 +109,15 @@ export const Navbar = () => {
 
       {/* Mobile Menu Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden transition-opacity duration-500 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden transition-opacity duration-500 ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setMobileOpen(false)}
       />
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[80%] max-w-[300px] bg-bg/95 backdrop-blur-xl border-l border-borderCol z-[100] md:hidden flex flex-col transition-transform duration-500 ease-in-out ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-[80%] max-w-[300px] bg-bg/95 backdrop-blur-xl border-l border-borderCol z-[100] md:hidden flex flex-col transition-transform duration-500 ease-in-out ${mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full p-8">
           <div className="flex justify-between items-center mb-12">
@@ -127,25 +125,24 @@ export const Navbar = () => {
               <img src="/favicon/favicon-96x96.png" alt="Grovegrid Logo" className="w-5 h-5 sm:w-6 sm:h-6 rounded-sm object-cover" />
               <span className="font-syne font-bold tracking-widest text-sm uppercase">Grovegrid</span>
             </div>
-            <button 
+            <button
               onClick={() => setMobileOpen(false)}
               className="text-textMuted hover:text-cyan-default transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
           </div>
-          
+
           <div className="flex flex-col gap-6">
             {navItems.map((item, index) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={handleNavClick}
-                className={`font-mono text-lg uppercase tracking-widest transition-all duration-300 ${
-                  activeSection === item.id
+                className={`font-mono text-lg uppercase tracking-widest transition-all duration-300 ${activeSection === item.id
                     ? "text-cyan-default translate-x-2"
                     : "text-textMuted hover:text-cyan-default hover:translate-x-2"
-                }`}
+                  }`}
                 style={{
                   transitionDelay: mobileOpen ? `${index * 50}ms` : "0ms",
                   opacity: mobileOpen ? 1 : 0,
