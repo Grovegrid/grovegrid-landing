@@ -19,7 +19,7 @@ const teamMembers = [
       facebook: "https://www.facebook.com/ridoy.baiday.5",
     },
     portfolio: {
-      url: "https://ridoy-baidya.vercel.app",
+      url: "https://ridoybaidya.vercel.app",
       label: "PORTFOLIO",
     },
   },
