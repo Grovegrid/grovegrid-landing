@@ -17,7 +17,7 @@ interface QuickAction {
   value: string;
 }
 
-/* â”€â”€ Knowledge Base â”€â”€ */
+/* --- Knowledge Base --- */
 const KNOWLEDGE = {
   about: {
     keywords: ["about", "who", "what is grovegrid", "company", "grovegrid", "tell me about", "what do you do", "introduce"],
@@ -25,32 +25,32 @@ const KNOWLEDGE = {
   },
   services: {
     keywords: ["service", "services", "what do you build", "offer", "capabilities", "build", "develop"],
-    response: `We specialize in **6 core service areas**:\n\n“ **School Systems** ” Digitalization of results, attendance & student tracking.\n“ **Newspaper Portals** ” Ultra-fast digital news platforms optimized for mobile.\n“ **Pharma Management** ” Intelligent inventory & POS for local pharmacies.\n“ **Coaching Portals** ” Online exams, payments, CRM.\n“ **E-commerce Stores** ” Professional stores with payment gateway integrations.\n“ **Corporate Identity** ” Custom high-end websites for premium brand presence.\n\nWant to see more? I can take you to the **Services** section.`,
-    actions: [{ label: "â†’ View Services", value: "navigate:services" }],
+    response: `We specialize in **6 core service areas**:\n\n- **School Systems** — Digitalization of results, attendance & student tracking.\n- **Newspaper Portals** — Ultra-fast digital news platforms optimized for mobile.\n- **Pharma Management** — Intelligent inventory & POS for local pharmacies.\n- **Coaching Portals** — Online exams, payments, CRM.\n- **E-commerce Stores** — Professional stores with payment gateway integrations.\n- **Corporate Identity** — Custom high-end websites for premium brand presence.\n\nWant to see more? I can take you to the **Services** section.`,
+    actions: [{ label: "View Services", value: "navigate:services" }],
   },
   process: {
     keywords: ["process", "how do you work", "methodology", "workflow", "how it works", "steps", "approach"],
-    response: `Our **4-step methodology** ensures flawless delivery:\n\n“ **01 ** ” Discovery ” We analyze your requirements and identify bottlenecks.\n\n“ **02 ** ” Scope & Plan ” Architectural blueprinting â€” data structures and tech stack.\n\n“ **03 ** ” Build & Review ” Aggressive iteration cycles with continuous collaboration.\n\n“ **04 ** ” Launch & Scale ” Production deployment with automated scaling.`,
-    actions: [{ label: "â†’ See Our Process", value: "navigate:how" }],
+    response: `Our **4-step methodology** ensures flawless delivery:\n\n**01 — Discovery**\nWe analyze your requirements and identify bottlenecks.\n\n**02 — Scope & Plan**\nArchitectural blueprinting — data structures and tech stack.\n\n**03 — Build & Review**\nAggressive iteration cycles with continuous collaboration.\n\n**04 — Launch & Scale**\nProduction deployment with automated scaling.`,
+    actions: [{ label: "See Our Process", value: "navigate:how" }],
   },
   contact: {
     keywords: ["contact", "reach", "email", "hire", "start a project", "get started", "work with", "connect", "message"],
-    response: `Ready to launch your project? Here's how to reach us:\n\nðŸ“© **Fill out the contact form** on our site â€” we reply within **24 hours**.\n\nYou can select your primary need:\nâ€¢ Web Development\nâ€¢ Workflow Automation\nâ€¢ API Integration\nâ€¢ Cloud / DevOps\n\nLet me take you there!`,
-    actions: [{ label: "â†’ Start a Project", value: "navigate:contact" }],
+    response: `Ready to launch your project? Here's how to reach us:\n\n**Fill out the contact form** on our site — we reply within **24 hours**.\n\nYou can select your primary need:\n- Web Development\n- Workflow Automation\n- API Integration\n- Cloud / DevOps\n\nLet me take you there!`,
+    actions: [{ label: "Start a Project", value: "navigate:contact" }],
   },
   location: {
     keywords: ["location", "where", "office", "address", "city", "country", "based"],
-    response: `We are based in **Sylhet, Bangladesh** ðŸ‡§ðŸ‡©, proudly founded by developers from Shahjalal University of Science and Technology (SUST). \n\nHowever, we work with clients globally to architect premium digital experiences!`,
+    response: `We are based in **Sylhet, Bangladesh**, proudly founded by developers from Shahjalal University of Science and Technology (SUST).\n\nHowever, we work with clients globally to architect premium digital experiences!`,
   },
   results: {
     keywords: ["results", "stats", "numbers", "projects", "how many", "track record", "speed", "portfolio"],
-    response: `Here's our track record so far:\n\nðŸš€ **50+** Projects Shipped\nâš¡ **<48h** Prototype Time\nðŸ”¥ **10x** Execution Speed\nðŸ’¯ **100%** TypeScript\n\nWe move fast and ship quality.`,
-    actions: [{ label: "â†’ See Results", value: "navigate:stats" }],
+    response: `Here's our track record so far:\n\n- **50+** Projects Shipped\n- **<48h** Prototype Time\n- **10x** Execution Speed\n- **100%** TypeScript\n\nWe move fast and ship quality.`,
+    actions: [{ label: "See Results", value: "navigate:stats" }],
   },
   pricing: {
     keywords: ["price", "pricing", "cost", "how much", "budget", "quote", "rate", "charge"],
     response: `We tailor pricing to each project's scope and complexity. There's no one-size-fits-all.\n\n**To get a custom quote:**\n1. Fill out the contact form with your project brief\n2. We'll schedule a discovery call\n3. You'll receive a detailed proposal within 48 hours\n\nNo hidden fees. No surprises.`,
-    actions: [{ label: "â†’ Get a Quote", value: "navigate:contact" }],
+    actions: [{ label: "Get a Quote", value: "navigate:contact" }],
   },
   tech: {
     keywords: ["tech", "technology", "stack", "tools", "framework", "next.js", "react", "typescript", "tailwind"],
@@ -72,7 +72,7 @@ const KNOWLEDGE = {
 const GREETING: Message = {
   id: "greeting",
   role: "bot",
-  text: `Hey there! ‘‹ I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n Learn about our **services & process**\n Explore our **location & tech stack**\n Navigate to any **section**\n Get a **project quote**\n\nWhat would you like to know?`,
+  text: `Hey there! I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n- Learn about our **services & process**\n- Explore our **location & tech stack**\n- Navigate to any **section**\n- Get a **project quote**\n\nWhat would you like to know?`,
   actions: [
     { label: "About Us", value: "about" },
     { label: "Services", value: "services" },
@@ -87,7 +87,7 @@ const FALLBACK_RESPONSES = [
   `That's a great question! Unfortunately it's outside my knowledge. I can help with anything about **grovegrid** — our services, process, or getting in touch.`,
 ];
 
-/* â”€â”€ Intent Matching â”€â”€ */
+/* --- Intent Matching --- */
 function matchIntent(input: string): { response: string; actions?: QuickAction[] } | null {
   const lower = input.toLowerCase().trim();
 
