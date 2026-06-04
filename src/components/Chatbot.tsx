@@ -33,11 +33,6 @@ const KNOWLEDGE = {
     response: `Our **4-step methodology** ensures flawless delivery:\n\n“ **01 ** ” Discovery ” We analyze your requirements and identify bottlenecks.\n\n“ **02 ** ” Scope & Plan ” Architectural blueprinting â€” data structures and tech stack.\n\n“ **03 ** ” Build & Review ” Aggressive iteration cycles with continuous collaboration.\n\n“ **04 ** ” Launch & Scale ” Production deployment with automated scaling.`,
     actions: [{ label: "â†’ See Our Process", value: "navigate:how" }],
   },
-  team: {
-    keywords: ["team", "founder", "who runs", "leadership", "ridoy", "priom", "ceo", "coo", "members", "who are you"],
-    response: `**The minds behind grovegrid:**\n\nðŸ‘¤ **Ridoy Baidya** â€” *Founder & CEO*\nFull-Stack Web Developer specializing in building robust and scalable web applications using modern technologies.\n\nðŸ‘¤ **Priom Chakraborty** â€” *Founder & COO*\nPassionate developer and strategic thinker. Drives operational excellence and product strategy ensuring every project exceeds expectations.`,
-    actions: [{ label: "â†’ Meet the Team", value: "navigate:team" }],
-  },
   contact: {
     keywords: ["contact", "reach", "email", "hire", "start a project", "get started", "work with", "connect", "message"],
     response: `Ready to launch your project? Here's how to reach us:\n\nðŸ“© **Fill out the contact form** on our site â€” we reply within **24 hours**.\n\nYou can select your primary need:\nâ€¢ Web Development\nâ€¢ Workflow Automation\nâ€¢ API Integration\nâ€¢ Cloud / DevOps\n\nLet me take you there!`,
@@ -69,7 +64,6 @@ const KNOWLEDGE = {
       { label: "Process", value: "navigate:how" },
       { label: "Results", value: "navigate:stats" },
       { label: "Clients", value: "navigate:testimonials" },
-      { label: "Team", value: "navigate:team" },
       { label: "Contact", value: "navigate:contact" },
     ],
   },
@@ -78,20 +72,19 @@ const KNOWLEDGE = {
 const GREETING: Message = {
   id: "greeting",
   role: "bot",
-  text: `Hey there! ‘‹ I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n Learn about our **services & process**\n Meet the **team & location**\n Navigate to any **section**\n Get a **project quote**\n\nWhat would you like to know?`,
+  text: `Hey there! ‘‹ I'm **GroveBot**, your guide to everything grovegrid.\n\nI can help you with:\n Learn about our **services & process**\n Explore our **location & tech stack**\n Navigate to any **section**\n Get a **project quote**\n\nWhat would you like to know?`,
   actions: [
     { label: "About Us", value: "about" },
     { label: "Services", value: "services" },
-    { label: "Meet the Team", value: "team" },
     { label: "Location", value: "location" },
     { label: "Start a Project", value: "contact" },
   ],
 };
 
 const FALLBACK_RESPONSES = [
-  `Hmm, I'm not sure about that one. But I can tell you about our **services**, **team**, **location**, or help you **start a project**! What interests you?`,
+  `Hmm, I'm not sure about that one. But I can tell you about our **services**, **location**, or help you **start a project**! What interests you?`,
   `I don't have info on that specifically, but I'm an expert on all things grovegrid! Try asking about our **capabilities**, **location**, or **tech stack**.`,
-  `That's a great question! Unfortunately it's outside my knowledge. I can help with anything about **grovegrid** our services, team, process, or getting in touch.`,
+  `That's a great question! Unfortunately it's outside my knowledge. I can help with anything about **grovegrid** — our services, process, or getting in touch.`,
 ];
 
 /* â”€â”€ Intent Matching â”€â”€ */
