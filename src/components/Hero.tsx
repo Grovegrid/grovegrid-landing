@@ -15,14 +15,7 @@ export const Hero = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 max-w-5xl mx-auto flex flex-col items-center"
       >
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-block border border-white/10 bg-white/5 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 mb-8 font-mono text-[10px] sm:text-xs text-cyan-default uppercase tracking-widest shadow-[0_0_15px_rgba(16,185,129,0.1)]"
-        >
-          v1.0 &mdash; Launch Day, May 10 2026
-        </motion.div>
+        
 
         <h1 className="font-syne font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tightest leading-[1.05] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-default to-purple-accent drop-shadow-lg pb-2">
           Where growth <br className="hidden sm:block" /> meets structure
