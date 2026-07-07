@@ -11,15 +11,24 @@ const projects = [
     description: "A comprehensive digital transformation for Nutan Bazar High School & College. We developed a custom platform that streamlines student analytics, automates attendance, and manages faculty workflows with zero friction.",
     image: "/projects/school.png",
     link: "https://nbmhsc.vercel.app",
-    tags: ["Next.js", "PostgreSQL", "Tailwind", "Automation"]
-  }
+    tags: ["Next.js", "PostgreSQL", "Tailwind", "Automation"],
+  },
+  {
+    id: "02",
+    title: "BanglaGo — Bangladesh Travel Portal.",
+    client: "BanglaGo",
+    description: "A high-performance React travel portal for discovering Bangladesh. Features a stunning Glassmorphism UI, advanced filtering by division & district, dark mode toggle, and buttery-smooth Framer Motion animations across 35+ curated destinations.",
+    image: "/projects/bangla-go.png",
+    link: "https://bangla-go.vercel.app",
+    tags: ["React", "Framer Motion", "Glassmorphism", "Dark Mode"],
+  },
 ];
 
 export const RecentWork = () => {
   return (
-    <section id="work" className="py-24 sm:py-32 relative overflow-hidden bg-bg">
+    <section id="work" className="py-16 sm:py-24 relative overflow-hidden bg-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-20 relative">
+        <div className="mb-12 relative">
           <h2 className="font-syne font-extrabold text-7xl sm:text-9xl tracking-tightest leading-none mb-4 opacity-[0.03] absolute -top-12 sm:-top-20 left-0 select-none w-full text-center sm:text-left">
             PORTFOLIO
           </h2>
@@ -31,7 +40,7 @@ export const RecentWork = () => {
           </div>
         </div>
 
-        <div className="space-y-32 sm:space-y-48">
+        <div className="space-y-20 sm:space-y-32">
           {projects.map((project, index) => (
             <div 
               key={project.id}
