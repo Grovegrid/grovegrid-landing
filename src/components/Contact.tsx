@@ -37,7 +37,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-panel relative z-10 px-4 sm:px-6 border-t border-borderCol">
+    <section id="contact" className="py-14 sm:py-20 bg-panel relative z-10 px-4 sm:px-6 border-t border-borderCol">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
